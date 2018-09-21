@@ -1,0 +1,35 @@
+.map{
+    position: relative;
+    padding: 3rem 0;
+}
+.map__text{
+    position: relative;
+    text-align: center;
+    color: $third-text-color;
+    text-transform: uppercase;
+    font-family: $primary-font-family;
+    font-weight: 700;
+    padding-top: px-to-rem(30px);
+    padding-bottom: px-to-rem(20px);
+    &::after{
+        position: absolute;
+        display: block;
+        content: ' ';
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: px-to-rem(40px);
+        height: px-to-rem(3px);
+        background-color: $third-text-color;
+    }
+
+    &::before{
+       @extend %pseudo;
+       left: 50%;
+       top: -5%;
+       transform: translateX(-50%);
+       width: px-to-rem(20px);
+       height: px-to-rem(26px);
+       background-image: url('../img/blog/PIN_2.svg');
+    }
+}

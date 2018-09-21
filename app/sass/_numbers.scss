@@ -1,0 +1,43 @@
+.numbers{
+    @include flex-settings(row, center);
+    flex-wrap: wrap;
+    @media (min-width: 768px){
+        @include flex-settings(row);
+        flex-wrap: nowrap;   
+    }
+}
+.numbers__item{
+    padding: 2rem 0;
+    flex-basis: 33%;
+    text-align: center;
+    @media (min-width: 768px){
+       border-right: 1px solid #b5eae0;
+       &:last-child{
+           border-right: none;
+       }
+    }
+    @media (min-width: 1024px){
+        padding: 3rem 0;
+    }
+}
+.numbers__amount{
+    color: $primary-text-color;
+    font-family: $primary-font-family;
+    font-weight: 700;
+    font-size: px-to-rem(30px);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    @media (min-width: 1024px){
+        font-size: px-to-rem(35px);
+    }
+}
+.numbers__object{
+    color: $primary-text-color;
+    font-family: $primary-font-family;
+    font-size: px-to-rem(10px);
+    font-weight: 400;
+    text-transform: uppercase;
+    @media (min-width: 1024px){
+        font-size: px-to-rem(12px);
+    }
+}

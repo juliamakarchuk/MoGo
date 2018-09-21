@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style:none;
+}
+@function px-to-rem($px){
+    $remSize: $px/16px;
+    @return #{$remSize}rem;
+}
+.container{
+    min-width: px-to-rem(320px);
+    max-width: px-to-rem(1450px);
+    width: 100%;
+}
+$primary-font-family: 'Montserrat';
+$decoration-font-family:"Kaushan Script";
+$text-font-family: 'Roboto';
+$primary-text-color: white;
+$secondary-text-color: #fce38a;
+$third-text-color: #f38181;
+$selection-color: #97e0d4;
+$text-color: #999;
+@function px-to-rem($px){
+    $remSize: $px/16px;
+    @return #{$remSize}rem;
+}
+@mixin flex-settings($direction:row, $jscon: flex-start, $al: stretch){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jscon;
+    align-items: $al;
+}
+.title--uppercase{
+   position: relative;
+   display: block;
+   font-family:$primary-font-family;
+   color: black;
+   font-size: 1.2rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   margin-bottom: 2rem;
+   margin-top: 0.6rem;
+   text-align: center;
+   @media (min-width: 768px){
+       font-size: 1.8rem;
+       margin-bottom: 4rem;
+       margin-top: 0.9rem;
+   }
+}
+.title--uppercase::after{
+    position: absolute;
+    display: block;
+    content: ' ';
+    left: 50%;
+    bottom: -40%;
+    transform: translateX(-50%);
+    width: px-to-rem(40px);
+    height: px-to-rem(3px);
+    background-color: $third-text-color;
+    @media (min-width: 768px){
+        width: px-to-rem(60px);
+        bottom: -80%;
+    }
+}
+.title--italic{
+    position: relative;
+    font-family: $decoration-font-family;
+    text-align: center;
+    color: black;
+    font-weight: 400;
+    font-size: px-to-rem(20px);
+    @media (min-width: 768px){
+        font-size: px-to-rem(30px);
+    }
+}
+%title{
+    font-family: $primary-font-family;
+    color: black;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: px-to-rem(14px);
+}
+%text{
+    color: $text-color;
+    font-size: 0.8rem;
+    font-family: $text-font-family;
+    @media (min-width: 768px){
+        font-size: px-to-rem(16px);
+    }
+}
+.text{
+    width: 85%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    color: $text-color;
+    font-size: 0.8rem;
+    font-family: $text-font-family;
+    @media (min-width: 768px){
+        font-size: px-to-rem(16px);
+    }
+}
+%pseudo{
+    display: inline-block;
+    position: absolute;
+    content:' ';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

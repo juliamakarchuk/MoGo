@@ -1,0 +1,29 @@
+.design{
+    padding-top: 2rem;
+}
+.design__item--after{
+    margin: auto;
+    position: relative;
+    width: px-to-rem(240px);
+    height: px-to-rem(300px);
+    @media (min-width: 768px){
+        width: px-to-rem(340px);
+        height: px-to-rem(350px);
+    }
+}
+.design__item--before{
+    position: absolute;
+    top: 63%;
+    left: 56%;
+    width: px-to-rem(120px);
+    height: px-to-rem(200px);
+    @media (min-width: 768px){
+        width: px-to-rem(170px);
+        height: px-to-rem(260px);
+    }
+}
+.design__image{
+   display: block;
+   width: 100%;
+   height: 100%;
+}

@@ -1,0 +1,61 @@
+.comments-section{
+    padding: 2rem 0;
+    position: relative;
+    @media (min-width: 768px){
+        padding: 3rem 0;
+    }
+}
+.comments-section__list{
+    @media (min-width: 768px){
+        @include flex-settings(row, space-between);
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+}
+
+.comments-section__item{
+    margin-bottom: 1rem;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    @media (min-width: 768px){
+        flex-basis: 50%;
+    }
+}
+.comment{
+    padding: 0.5rem 1rem;
+    @media(min-width: 1024px){
+        @include flex-settings(row, space-between, flex-start);
+     }
+}
+.comment__body{
+    @media (min-width:1024px){
+        margin-left: 0.7rem;
+    }
+}
+.comment__author{
+  @extend %title;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.comment__position{
+    position: relative;
+    font-family: $text-font-family;
+    font-style: italic;
+    font-weight: 200;
+    font-size: px-to-rem(15px);
+    margin-bottom: 2rem;
+    &::after{
+        position: absolute;
+        display: block;
+        content: ' ';
+        left: 0;
+        bottom: -90%;
+        width: px-to-rem(40px);
+        height: px-to-rem(3px);
+        background-color: $third-text-color;
+    }
+}
+.comment__text{
+    @extend %text;
+}

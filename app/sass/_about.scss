@@ -1,0 +1,87 @@
+.about{
+    padding: 2rem 0;
+    @include flex-settings(column, center, center);
+
+    @media (min-width: 768px){
+      padding: 3rem 0rem;
+    }
+}
+.about__list{
+    @include flex-settings(row, space-between);
+    flex-wrap: wrap;
+    padding: 0rem 1rem;
+}
+.about__item{
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  &:last-child{
+      margin-bottom: 0;
+  }
+  &:hover .item-overlay{
+      @include flex-settings(column, center, center);
+      z-index: 100;
+  }
+  &:hover .item__img-overlay{
+      display: block;
+      z-index: 1;
+  }
+  @media (min-width: 768px){
+    width: 32%;
+    margin-bottom: 0;
+  }
+}
+.item__img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.item__img-overlay{
+   position: absolute;
+   display: none;
+   width: 100%;
+   height: 100%;
+   background-color: #95e1d3;
+}
+.item-overlay{
+    display: none;
+    position: absolute;
+    left: -2%;
+    top: -3%;
+    width: 100%;
+    height: 100%;
+    &--first{
+        background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url('../img/about1.png');
+    }
+    &--second{
+        background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url('../img/about2.png');
+    }
+    &--third{
+        background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url('../img/about3.png');
+    }
+}
+.item-overlay__text{
+    display: block;
+    position: relative;
+    color: $primary-text-color;
+    font-family: $primary-font-family;
+    font-size: px-to-rem(18px);
+    text-transform: uppercase;
+  }
+.item-overlay__icon{
+    display: block;
+    width: px-to-rem(30px);
+    height: px-to-rem(30px);
+    margin-bottom: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--team{
+        background-image: url('../img/multiple-users-silhouette.svg');
+    }
+    &--productive{
+        background-image: url('../img/monitor.svg');
+    }
+    &--creative{
+        background-image: url('../img/lightbulb-idea.svg');
+    }
+}

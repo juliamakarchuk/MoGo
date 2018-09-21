@@ -1,0 +1,67 @@
+.service{
+    padding: 2rem 0;
+    @include flex-settings(column);
+    @media (min-width: 768px){
+        padding: 3rem 0rem;;
+    }
+}
+.service__list{
+    @media (min-width: 768px){
+        @include flex-settings(row, space-between);
+        flex-wrap: wrap;
+        padding: 0 1rem;
+    }
+}
+.service__item{
+    padding: 2rem 0rem;
+    margin: auto;
+    @media(min-width: 768px){
+        flex-basis: 48%;
+        margin: 0;
+        padding: 2rem 0rem;
+    }
+    @media (min-width:1040px){
+        flex-basis: 32%;
+    }
+}
+.item__body{
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding-left: 50px;
+ &::before{
+    @extend %pseudo;
+    width: px-to-rem(33px);
+    height: px-to-rem(33px);
+    left: 0%;
+ }
+ &--photography::before{
+   background-image: url('../img/service/ALARM.svg');
+ }
+ &--design::before{
+     background-image: url('../img/service/LINE_GRAPH.svg');
+ }
+ &--creativity::before{
+     background-image: url('../img/service/COMPUTER_/_OK.svg');
+ }
+ &--seo::before{
+     background-image: url('../img/service/BOOK_2.svg');
+ }
+ &--css::before{
+     background-image: url('../img/service/HOME.svg');
+ }
+ &--digital::before{
+     background-image: url('../img/service/IMAGE.svg');
+ }
+ @media (min-width: 768px){
+     width: 100%;
+     margin: 0;
+ }
+}
+.item__title{
+    @extend %title;
+    margin-bottom: px-to-rem(12px);
+}
+.item__text{
+    @extend %text;
+}
