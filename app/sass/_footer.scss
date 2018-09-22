@@ -113,7 +113,9 @@ input[type=submit]{
     }
 }
 .footer-blog__descr{
-  margin-left: 0.5rem;
+    @media (min-width:768px){
+          margin-left: 0.5rem;
+    }
 }
 .footer-blog__img{
     display: inline-block;

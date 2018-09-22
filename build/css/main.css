@@ -678,7 +678,7 @@ ul {
   .item__body--design::before {
     background-image: url("../img/service/LINE_GRAPH.svg"); }
   .item__body--creativity::before {
-    background-image: url("../img/service/COMPUTER_/_OK.svg"); }
+    background-image: url("../img/service/OK.svg"); }
   .item__body--seo::before {
     background-image: url("../img/service/BOOK_2.svg"); }
   .item__body--css::before {
@@ -1383,8 +1383,9 @@ input[type=submit] {
           -ms-flex-align: stretch;
               align-items: stretch; } }
 
-.footer-blog__descr {
-  margin-left: 0.5rem; }
+@media (min-width: 768px) {
+  .footer-blog__descr {
+    margin-left: 0.5rem; } }
 
 .footer-blog__img {
   display: inline-block; }
