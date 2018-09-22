@@ -86,6 +86,7 @@ input[type=email]{
     outline: none;
 }
 input[type=submit]{
+   display: inline-block;
    text-transform: uppercase;
    background-color: $selection-color;
    color: white;
