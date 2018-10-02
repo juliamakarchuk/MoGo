@@ -1174,6 +1174,11 @@ ul {
   font-weight: 500;
   margin-bottom: 0.3rem; }
 
+.blog__link {
+  color: inherit; }
+  .blog__link:hover, .blog__link:focus {
+    color: #97e0d4; }
+
 .blog-article__text {
   padding-bottom: 1rem;
   border-bottom: 1px solid  #e5e5e5; }

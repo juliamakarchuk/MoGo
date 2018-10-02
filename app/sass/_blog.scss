@@ -59,6 +59,14 @@
   font-weight: 500;
   margin-bottom: 0.3rem;
 }
+.blog__link{
+   color: inherit;
+   &:hover,
+   &:focus{
+      color:$selection-color;
+   }
+}
+
 .blog-article__text{
   @extend %text;
   padding-bottom: 1rem;
