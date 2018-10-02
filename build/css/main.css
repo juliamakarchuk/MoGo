@@ -1402,6 +1402,7 @@ input[type=submit] {
   line-height: 0.875rem ""; }
 
 .footer-blog__date {
+  display: block;
   color: #999;
   font-weight: 200;
   font-size: 0.8125rem;

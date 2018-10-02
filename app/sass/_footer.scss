@@ -132,6 +132,7 @@ input[type=submit]{
     line-height: px-to-rem(14px)''
 }
 .footer-blog__date{
+    display:block;
     color: $text-color;
     font-weight: 200;
     font-size: px-to-rem(13px);
